@@ -1,0 +1,18 @@
+{
+  "name": "mongodb-outbox-pattern",
+  "version": "1.0.0",
+  "description": "Transactional outbox pattern implementation with MongoDB and Node.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.18.2",
+    "mongoose": "^7.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
