@@ -45,7 +45,11 @@ MongoDB Change Streams require MongoDB to be deployed as a replica set. For loca
 
 ```
 .env:
+# self-managed MongoDB cluster
 MONGODB_URI="mongodb://<user>:<password>@<host addresses>/<database>"
+
+# Atlas
+# MONGODB_URI="mongodb+srv://<user>:<password>@<host address>/<database>"
 ```
 
 ### Backend Setup
