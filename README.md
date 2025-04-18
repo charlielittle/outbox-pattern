@@ -19,7 +19,7 @@ This project consists of two main parts:
 
 - Implements the transactional outbox pattern for user notifications
 - Uses MongoDB transactions to ensure atomicity
-- Leverages MongoDB Change Streams for real-time event processing
+- Leverages [MongoDB Change Streams](https://www.mongodb.com/docs/manual/changeStreams/) for real-time event processing
 - Provides REST APIs for user management and monitoring
 
 ### 2. Frontend Testing UI (React)
@@ -39,7 +39,8 @@ This project consists of two main parts:
 
 ### Setting Up MongoDB as a Replica Set
 
-MongoDB Change Streams require MongoDB to be deployed as a replica set. For local development, you can set up a single-node replica set:
+MongoDB Change Streams require MongoDB to be deployed as a replica set. For local development, you can set up a single-node replica set,
+or better yet use MongoDB Atlas and [setup any cluster from Free, Flex, or Dedicated Tiers](https://www.mongodb.com/cloud/atlas/register):
 
 1. Use your MongoDB replica set by adding the URL/credentials to .env:
 
@@ -48,7 +49,7 @@ MongoDB Change Streams require MongoDB to be deployed as a replica set. For loca
 # self-managed MongoDB cluster
 MONGODB_URI="mongodb://<user>:<password>@<host addresses>/<database>"
 
-# Atlas
+# MongoDB Atlas Cluster
 # MONGODB_URI="mongodb+srv://<user>:<password>@<host address>/<database>"
 ```
 
@@ -329,7 +330,7 @@ The following API endpoints are available for testing:
 
 ### MongoDB Connection Issues
 
-- Ensure MongoDB is running as a replica set
+- Ensure MongoDB is running as a replica set, and if using Atlas that network security and authentication/authorization is setup for the project
 - Check if the connection string is correct
 - Verify MongoDB port is not blocked by a firewall
 
